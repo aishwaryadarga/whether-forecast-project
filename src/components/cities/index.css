@@ -1,0 +1,144 @@
+/* Base styles for the table */
+.city-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2eded;
+}
+
+/* Filter input styling */
+.filter-input {
+    margin-top: 4px;
+    padding: 4px;
+    width: 90%;
+    /* Adjust width of filter input */
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.8em;
+    /* Smaller font size for filter input */
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+
+    .city-table th,
+    .city-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .city-table th,
+    .city-table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .city-table {
+        font-size: 12px;
+    }
+
+    .city-table th,
+    .city-table td {
+        width: 25%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .city-table th,
+    .city-table td {
+        font-size: 10px;
+        padding: 6px;
+    }
+
+    .city-table {
+        font-size: 10px;
+    }
+
+    .city-table th,
+    .city-table td {
+        width: auto;
+        display: block;
+        text-align: right;
+    }
+
+    .city-table th::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .city-table td {
+        text-align: left;
+        position: relative;
+        padding-left: 50%;
+        box-sizing: border-box;
+    }
+
+    .city-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+}
+
+.city-table {
+    display: flex;
+    flex-direction: column;
+}
+
+.city-table > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #000;
+}
+
+.city-table > div > div {
+    width: 33%;
+    /* position: relative; */
+}
+
+.filter-input {
+    width: 70%;
+    margin-top: 10px;
+}
+
+
+
+.table_row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+
+    /* border-bottom: 1px solid #ddd; */
+}
+
+a.custom_link:-webkit-any-link {
+    color: inherit !important;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.table_data_name,
+.table_data_country,
+.table_data_timezone {
+    width: 33%;
+}
+
+.colomn_title {
+    cursor: pointer;
+}
